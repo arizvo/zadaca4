@@ -5,11 +5,14 @@ public class Task1c {
         // Task 1.c
         System.out.println("Task 1.c: ");
         Scanner reader = new Scanner(System.in);
-        int total = 0;
+        Integer total = null;
         int exitLoopCondition = -1000;
         int newNumber;
 
         do {
+            if (total == null) {
+                total = 0;
+            }
             System.out.print("Please enter integer: ");
             newNumber = reader.nextInt();
             reader.nextLine(); // "swallow" leftover newline

@@ -7,21 +7,25 @@ public class Task1f {
         Scanner reader = new Scanner(System.in);
         int total = 0;
         int newNumber = 0;
+        int exitLoopCondition = -1000;
 
-        while (true) {
-            System.out.println("Which operation would you like to use: *, /, +, -?");
+        do {
+            System.out.println("Which operation would you like to use: *, /, +, -, =?");
             String arithmeticOperator;
             arithmeticOperator = reader.nextLine();
             if (arithmeticOperator.equals("=")) {
                 System.out.println("Calculator Result is " + total + ";\n");
-                break;
+                total = 0;
             } else {
                 System.out.print("Please enter integer: ");
                 newNumber = reader.nextInt();
                 reader.nextLine(); // "swallow" leftover newline
                 total = calculateResult(total, newNumber, arithmeticOperator);
             }
-        }
+            if (newNumber == exitLoopCondition) {
+                System.out.println("Exit number " + exitLoopCondition + " detected");
+            }
+        } while (newNumber != exitLoopCondition);
     }
 
     public static int calculateResult (int numberA, int numberB, String arithmeticOperator) {
