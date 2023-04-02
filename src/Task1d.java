@@ -11,8 +11,8 @@ public class Task1d {
 
         do {
             System.out.println("Which operation would you like to use: *, /, +, -?");
-            String arithmeticOperator = reader.nextLine();
-            System.out.print("Please enter integer: ");
+            char arithmeticOperator = reader.next().charAt(0);
+            System.out.println("Please enter integer: ");
             newNumber = reader.nextInt();
             reader.nextLine(); // "swallow" leftover newline
             if (newNumber == exitLoopCondition) {
@@ -31,14 +31,14 @@ public class Task1d {
         System.out.println(" is " + finalResult);
     }
 
-    public static int calculateResult (int numberA, int numberB, String arithmeticOperator) {
-        if (arithmeticOperator.equals("+")) {
+    public static int calculateResult(int numberA, int numberB, char arithmeticOperator) {
+        if (arithmeticOperator == '+') {
             return Task1a.addingNumbers(numberA, numberB);
-        } else if (arithmeticOperator.equals("-")) {
+        } else if (arithmeticOperator == '-') {
             return Task1a.subtractingNumbers(numberA, numberB);
-        } else if (arithmeticOperator.equals("*")) {
+        } else if (arithmeticOperator == '*') {
             return Task1a.multiplyingNumbers(numberA, numberB);
-        } else if (arithmeticOperator.equals("/")) {
+        } else if (arithmeticOperator == '/') {
             return Task1a.dividingNumbers(numberA, numberB);
         } else {
             System.out.println("Operator is invalid.");

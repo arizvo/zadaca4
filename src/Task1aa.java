@@ -7,8 +7,8 @@ public class Task1aa {
         Scanner reader = new Scanner(System.in);
         int total = 1;
 
-        while (total >= 0) {
-            System.out.print("Enter positive number: ");
+        while (total > 0) {
+            System.out.println("Enter positive number: ");
             total = reader.nextInt();
         }
     }

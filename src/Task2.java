@@ -19,11 +19,21 @@ public class Task2 {
                 }
             } while (newNumber != exitLoopCondition);
 
-            System.out.println(arrayElements.substring(0, arrayElements.length() - 2));
+            System.out.println(copyAllExcludingSpecifiedLength(arrayElements, 2));
             System.out.println("Do you want to expand the array? y/n");
             yesOrNoString = reader.next();
         } while (!yesOrNoString.equals("n"));
 
         System.out.println("You chose not to expand the array.");
+    }
+
+    public static String copyAllExcludingSpecifiedLength(String original, int excludedLength) {
+        String copied = "";
+
+        for (int i = 0; i < original.length() - excludedLength; i++) {
+            copied += original.charAt(i);
+        }
+
+        return copied;
     }
 }

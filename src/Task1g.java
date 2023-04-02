@@ -25,13 +25,12 @@ public class Task1g {
             }
 
             System.out.println("Which operation would you like to use: *, /, +, -, =?");
-            String arithmeticOperator;
-            arithmeticOperator = reader.nextLine();
-            if (arithmeticOperator.equals("=")) {
+            char arithmeticOperator = reader.next().charAt(0);
+            if (arithmeticOperator == '=') {
                 System.out.println("Calculator Result is " + total + "\n");
                 total = firstNumber; // The first number that was initially entered is used again
             } else {
-                System.out.print("Please enter integer: ");
+                System.out.println("Please enter integer: ");
                 newNumber = reader.nextInt();
                 reader.nextLine(); // "swallow" leftover newline
                 total = calculateResult(total, newNumber, arithmeticOperator);
@@ -44,14 +43,14 @@ public class Task1g {
         }
     }
 
-    public static int calculateResult (int numberA, int numberB, String arithmeticOperator) {
-        if (arithmeticOperator.equals("+")) {
+    public static int calculateResult(int numberA, int numberB, char arithmeticOperator) {
+        if (arithmeticOperator == '+') {
             return Task1a.addingNumbers(numberA, numberB);
-        } else if (arithmeticOperator.equals("-")) {
+        } else if (arithmeticOperator == '-') {
             return Task1a.subtractingNumbers(numberA, numberB);
-        } else if (arithmeticOperator.equals("*")) {
+        } else if (arithmeticOperator == '*') {
             return Task1a.multiplyingNumbers(numberA, numberB);
-        } else if (arithmeticOperator.equals("/")) {
+        } else if (arithmeticOperator == '/') {
             return Task1a.dividingNumbers(numberA, numberB);
         } else {
             return 0;

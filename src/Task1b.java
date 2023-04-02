@@ -9,7 +9,7 @@ public class Task1b {
         int exitLoopCondition = -1000;
 
         do {
-            System.out.print("Please enter any integer: ");
+            System.out.println("Please enter any integer: ");
             total = reader.nextInt();
             if (total == exitLoopCondition) {
                 System.out.println("Exit number " + exitLoopCondition + " detected");

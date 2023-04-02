@@ -13,7 +13,7 @@ public class Task1c {
             if (total == null) {
                 total = 0;
             }
-            System.out.print("Please enter integer: ");
+            System.out.println("Please enter integer: ");
             newNumber = reader.nextInt();
             reader.nextLine(); // "swallow" leftover newline
             if (newNumber == exitLoopCondition) {
@@ -25,7 +25,7 @@ public class Task1c {
         } while (newNumber != exitLoopCondition);
     }
 
-    public static void writeResult (int numberA, int numberB) {
+    public static void writeResult(int numberA, int numberB) {
         System.out.print("Total of " + numberA);
         System.out.print(" and " + numberB);
         System.out.println(" is " + Task1a.addingNumbers(numberA, numberB));

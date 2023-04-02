@@ -8,8 +8,8 @@ public class Task1aaa {
         int total = 1;
 
         do {
-            System.out.print("Enter positive number: ");
+            System.out.println("Enter positive number: ");
             total = reader.nextInt();
-        } while (total >= 0);
+        } while (total > 0);
     }
 }
