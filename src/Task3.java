@@ -87,11 +87,12 @@ public class Task3 {
         }
     }
 
-    public static boolean isPalindrome (String expression) {
+    public static boolean isPalindrome(String expression) {
         expression = expression.toLowerCase().replaceAll(" ", "");
         System.out.println(expression);
+        char[] textToCheck = expression.toCharArray();
         for (int i = 0; i < expression.length() / 2; i++) {
-            if (expression.toCharArray()[i] != expression.toCharArray()[expression.length() - 1 - i]) {
+            if (textToCheck[i] != textToCheck[expression.length() - 1 - i]) {
                 return false;
             }
         }
